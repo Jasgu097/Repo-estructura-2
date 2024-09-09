@@ -1,0 +1,41 @@
+export class NodeTree {
+    private data: number;
+    private father: NodeTree | null; // NodeTree* es un apuntador
+    private leftChild: NodeTree | null;
+    private rightChild: NodeTree | null;
+
+    constructor(data: number) {
+        this.data = data;
+        this.father = null;
+        this.leftChild = null;
+        this.rightChild = null;
+    }
+
+    public getData(): number {
+        return this.data;
+    }
+
+    public setFather(newFather: NodeTree | null): void {
+        this.father = newFather;
+    }
+
+    public getFather() {
+        return this.father;
+    }
+
+    public setLeftChild(newChild: NodeTree | null): void {
+        this.leftChild = newChild;
+    }
+
+    public getLeftChild() {
+        return this.leftChild;
+    }
+
+    public setRightChild(newChild: NodeTree | null): void {
+        this.rightChild = newChild;
+    }
+
+    public getRightChild() {
+        return this.rightChild;
+    }
+}
